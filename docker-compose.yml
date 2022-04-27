@@ -15,16 +15,14 @@ services:
     restart: always
 
   apex:
-    image: container-registry.oracle.com/database/ords:${DB_ORACLE_VERSION}
-    container_name: ${APP_CONTAINER_NAME}  
-    environment:
-      ORACLE_CHARACTERSET: ${DB_CHARACTERSET}
-      ORACLE_PWD: ${DB_ORACLE_PASSWORD}
+    image: container-registry.oracle.com/database/ords:${APP_VERSION}
+    container_name: ${APP_CONTAINER_NAME} 
+    depends_on:
+      - oracledb
     volumes:
-      - oracledb:/opt/oracle/oradata
+      - src/ords_volume/:/opt/oracle/variables
     ports:
-      -  ${DB_ORACLE_PORT}:1521
-      -  ${DB_MANAGE_PORT}:5500
+      -  ${APP_PORT}:8181
     restart: always
     
 networks:
