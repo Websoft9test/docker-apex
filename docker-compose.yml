@@ -3,7 +3,7 @@ version: '3.8'
 services:
   oracledb:
     image: container-registry.oracle.com/database/express:${DB_ORACLE_VERSION}
-    container_name: ${APP_CONTAINER_NAME}  
+    container_name: ${APP_CONTAINER_NAME}-oracledb  
     environment:
       ORACLE_CHARACTERSET: ${DB_CHARACTERSET}
       ORACLE_PWD: ${DB_ORACLE_PASSWORD}
@@ -14,6 +14,19 @@ services:
       -  ${DB_MANAGE_PORT}:5500
     restart: always
 
+  apex:
+    image: container-registry.oracle.com/database/ords:${DB_ORACLE_VERSION}
+    container_name: ${APP_CONTAINER_NAME}  
+    environment:
+      ORACLE_CHARACTERSET: ${DB_CHARACTERSET}
+      ORACLE_PWD: ${DB_ORACLE_PASSWORD}
+    volumes:
+      - oracledb:/opt/oracle/oradata
+    ports:
+      -  ${DB_ORACLE_PORT}:1521
+      -  ${DB_MANAGE_PORT}:5500
+    restart: always
+    
 networks:
   default:
       name: ${APP_NETWORK}
