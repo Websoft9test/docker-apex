@@ -20,7 +20,7 @@ services:
     depends_on:
       - oracledb
     volumes:
-      - .src/ords_volume/conn_string.txt:/opt/oracle/variables/
+      - .src/ords_volume/conn_string.txt:/opt/oracle/variables/conn_string.txt
       - apex:/opt/oracle/
     ports:
       -  ${APP_PORT}:8181
