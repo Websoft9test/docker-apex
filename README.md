@@ -1,4 +1,4 @@
-# Apex on Docker
+# Oracle APEX on Docker
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -59,7 +59,7 @@ ln -sf /usr/local/bin/docker-compose  /usr/bin
 sudo systemctl start docker
 ```
 
-#### Install Apex
+#### Install Oracle APEX
 
 We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose.yml) by yourself
 
@@ -107,11 +107,11 @@ By default, the available users are:
 | phpmyadmin | 5500 | Web-GUI database management tool | Y |
 ## Documentation
 
-[Apex Administrator Guide](https://support.websoft9.com/docs/apex)
+[Oracle APEX Administrator Guide](https://support.websoft9.com/docs/apex)
 
 ## Enterprise Support
 
-If you want to get our Enterprise Support to ensure high availability of applications, you can subscribe our [Apex Enterprise Support](https://apps.websoft9.com/apex) 
+If you want to get our Enterprise Support to ensure high availability of applications, you can subscribe our [Oracle APEX Enterprise Support](https://apps.websoft9.com/apex) 
 
 What you get with a Enterprise Support subscription?
 

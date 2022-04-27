@@ -1,4 +1,4 @@
-# Apex on Docker
+# Oracle APEX on Docker
 
 ![](https://libs.websoft9.com/common/websoft9-cloud-installer.png) 
 
@@ -6,7 +6,7 @@
 
 [简体中文](/README-zh.md) | [English](/README.md) 
 
-本项目是由 [Websoft9](https://www.websoft9.com) 研发的 **云原生程序** ，大大简化 Apex 复杂的安装及配置。
+本项目是由 [Websoft9](https://www.websoft9.com) 研发的 **云原生程序** ，大大简化 Oracle APEX 复杂的安装及配置。
 
 ## 系统要求
 
@@ -63,7 +63,7 @@ ln -sf /usr/local/bin/docker-compose  /usr/bin
 sudo systemctl start docker
 ```
 
-#### 安装 Apex
+#### 安装 Oracle APEX
 
 直接运行下面的命令快速安装应用。如果你熟悉 Docker，建议先修改 [docker-compose](docker-compose.yml) 文件以满足自己的需求
 
@@ -79,7 +79,7 @@ sudo docker-compose up -d
 
 ### 常见问题
 
-#### 安装 Apex 前需要更改密码吗？
+#### 安装 Oracle APEX 前需要更改密码吗？
 
 是的, 在生产环境中，您应该在 docker-compose 文件中修改所有数据库密码和应用程序密码
 
@@ -113,11 +113,11 @@ sudo docker-compose up -d
 | phpmyadmin | 5500 | 数据库可视化管理工具 | Y |
 ## 文档
 
-[Apex 管理员手册](https://support.websoft9.com/docs/apex)
+[Oracle APEX 管理员手册](https://support.websoft9.com/docs/apex)
 
 ## 企业级支持
 
-如果需要企业级支持，请订阅我们提供的 [Apex 企业级支持版](https://apps.websoft9.com/apex) 
+如果需要企业级支持，请订阅我们提供的 [Oracle APEX 企业级支持版](https://apps.websoft9.com/apex) 
 
 订阅企业级产品后，您可获得：
 
