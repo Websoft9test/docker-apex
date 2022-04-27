@@ -20,7 +20,7 @@ services:
     depends_on:
       - oracledb
     volumes:
-      - src/ords_volume/:/opt/oracle/variables
+      - .src/ords_volume/:/opt/oracle/variables
     ports:
       -  ${APP_PORT}:8181
     restart: always
