@@ -20,7 +20,7 @@ services:
     depends_on:
       - oracledb
     volumes:
-      - /root/docker-apex/src/ords/:/opt/oracle/variables
+      -  ${VOLUMES_PATH_PREFIX}/ords/:/opt/oracle/variables
     ports:
       -  ${APP_PORT}:8181
     restart: always
