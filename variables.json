@@ -1,6 +1,6 @@
 {
   "name": "apex",
-  "trademark": "Apex",
+  "trademark": "Oracle APEX",
   "installpath": "/data/wwwroot/apex",
   "compose_file": "docker-compose.yml",
   "fork_url": "https://github.com/ONLYOFFICE/docker#recommended-system-requirements",
