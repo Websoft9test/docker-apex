@@ -21,6 +21,7 @@ services:
       - oracledb
     volumes:
       - .src/ords_volume/:/opt/oracle/variables
+      - apex:/opt/oracle/
     ports:
       -  ${APP_PORT}:8181
     restart: always
@@ -31,3 +32,4 @@ networks:
 
 volumes:
   oracledb:
+  apex:
