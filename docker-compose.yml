@@ -19,6 +19,7 @@ services:
     container_name: ${APP_NAME} 
     depends_on:
       - oracledb
+    command: ["/bin/bash", "-c", "sed -i 's/Welcome_1/${APP_PASSWORD}/g' /opt/oracle/apex/setapexadmin.sql; /bin/bash  /opt/oracle/ords/startService.sh"]
     volumes:
       -  ${VOLUMES_PATH_PREFIX}/ords/:/opt/oracle/variables
     ports:
