@@ -19,9 +19,13 @@ services:
     container_name: ${APP_NAME} 
     depends_on:
       - oracledb
-    command: ["/bin/bash", "-c", "sed -i 's/Welcome_1/${APP_PASSWORD}/g' /opt/oracle/apex/setapexadmin.sql; /bin/bash  /opt/oracle/ords/startService.sh"]
-    volumes:
-      -  ${VOLUMES_PATH_PREFIX}/ords/:/opt/oracle/variables
+    command:
+      - /bin/bash
+      - -c
+      - |
+        /bin/echo 'CONN_STRING=sys/$DB_ORACLE_PASSWORD@oracledb:$DB_ORACLE_PORT/xepdb1' > /opt/oracle/variables/conn_string.txt
+        sed -i 's/Welcome_1/${APP_PASSWORD}/g' /opt/oracle/apex/setapexadmin.sql
+        /bin/bash  /opt/oracle/ords/startService.sh
     ports:
       -  ${APP_PORT}:8181
     restart: always
@@ -32,3 +36,4 @@ networks:
 
 volumes:
   oracledb:
+
