@@ -77,8 +77,8 @@ Yes, you should modify all database password and application password at docker-
 #### Docker runing failed for the reason that port conflict?
 You should modify ports at [docker-compose file](docker-compose-production.yml) and docker-compose again
 
-#### question1  
-answer1  
+#### How can I access SQL develop web  
+After the container starts normally, it passes through `http://ip:port/ords/sql-developer` can enter SQL develop web. In order to run normally, you need to run the following script:`docker cp src/ords/sqldevelopweb.sql apex-oracledb:/home/oracle` `docker exec -it apex-oracledb sqlplus sys/123456@xepdb1 as sysdba` `GRANT CREATE SESSION, CREATE TABLE, CREATE PROCEDURE,DBA, PDB_DBA TO pdbadmin;` `@sqldevelopweb.sql`  
 ### Usage instructions
 
 You can point your browser to: *`http://Instance's Internet IP:port`*  
