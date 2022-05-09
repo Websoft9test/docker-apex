@@ -103,9 +103,9 @@ sudo docker-compose up -d
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| APEX | 9001 | 浏览器访问 Apex(ip:port/ords) | Y |
-| SQL Develop Web | 9001 | 浏览器访问 SQL Develop Web(ip:port/ords/sql-developer) | Y |
-| phpmyadmin | 5500 | 数据库可视化管理工具 | Y |
+| APEX | 9001 | 浏览器访问 Apex(http://ip:9001/ords) | Y |
+| SQL Develop Web | 9001 | 浏览器访问 SQL Develop Web(http://ip:9001/ords/sql-developer) | Y |
+| phpmyadmin | 5500 | 数据库可视化管理工具(https://ip:5500/em) | Y |
 ## 文档
 
 [Oracle APEX 管理员手册](https://support.websoft9.com/docs/apex)
