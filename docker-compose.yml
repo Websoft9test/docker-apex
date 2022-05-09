@@ -7,6 +7,11 @@ services:
     environment:
       ORACLE_CHARACTERSET: ${DB_CHARACTERSET}
       ORACLE_PWD: ${DB_ORACLE_PASSWORD}
+      ORACLE_SID: ${DB_ORACLE_SID}
+      ORACLE_PDB: ${DB_ORACLE_PDB}
+      INIT_SGA_SIZE: ${DB_ORACLE_SGA}
+      INIT_PGA_SIZE: ${DB_ORACLE_PGA}
+      ENABLE_ARCHIVELOG: true
     volumes:
       - oracledb:/opt/oracle/oradata
     ports:
