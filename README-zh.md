@@ -84,7 +84,7 @@ sudo docker-compose up -d
 修改 [docker-compose](docker-compose.yml) 文件中冲突的端口，然后再启动容器
 
 #### 如何才能访问SQL Develop Web  
-容器正常启动后，通过`http://ip:port/ords/sql-developer`可以进入SQL Develop Web，为了正常运行，需要运行如下脚本：`docker cp src/docker exec -it apex-oracledb sqlplus sys/123456@xepdb1 as sysdba; GRANT CREATE SESSION, CREATE TABLE, CREATE PROCEDURE,DBA, PDB_DBA TO pdbadmin;`  
+容器正常启动后，通过`http://ip:port/ords/sql-developer`可以进入SQL Develop Web，为了正常运行，需要运行如下脚本：`docker cp src/ords/sqldevelopweb.sql apex-oracledb:/home/oracle` `docker exec -it apex-oracledb sqlplus sys/123456@xepdb1 as sysdba` `GRANT CREATE SESSION, CREATE TABLE, CREATE PROCEDURE,DBA, PDB_DBA TO pdbadmin;` `@sqldevelopweb.sql`  
 ### 使用说明
 
 启动应用后，本地浏览器访问 URL: *`http://服务器公网IP:端口`* 进入应用。  
