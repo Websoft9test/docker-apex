@@ -54,7 +54,7 @@
   "faqs": [
     {
       "question_cn": "如何才能访问SQL Develop Web",
-      "answer_cn": "容器正常启动后，通过`http://ip:port/ords/sql-developer`可以进入SQL Develop Web，为了正常运行，需要运行如下脚本：`docker cp src/ords/sqldevelopweb.sql apex-oracledb:/home/oracle` `docker exec -it apex-oracledb sqlplus sys/123456@xepdb1 as sysdba` `GRANT CREATE SESSION, CREATE TABLE, CREATE PROCEDURE,DBA, PDB_DBA TO pdbadmin;` `@sqldevelopweb.sql`",
+      "answer_cn": "容器正常启动后，通过`http://ip:port/ords/sql-developer`可以进入SQL Develop Web，为了正常运行，需要运行如下脚本： -`docker cp src/ords/sqldevelopweb.sql apex-oracledb:/home/oracle`  -`docker exec -it apex-oracledb sqlplus sys/123456@xepdb1 as sysdba`  -`GRANT CREATE SESSION, CREATE TABLE, CREATE PROCEDURE,DBA, PDB_DBA TO pdbadmin;`  -`@sqldevelopweb.sql`",
       "question_en": "How can I access SQL develop web",
       "answer_en": "After the container starts normally, it passes through `http://ip:port/ords/sql-developer` can enter SQL develop web. In order to run normally, you need to run the following script:`docker cp src/ords/sqldevelopweb.sql apex-oracledb:/home/oracle` `docker exec -it apex-oracledb sqlplus sys/123456@xepdb1 as sysdba` `GRANT CREATE SESSION, CREATE TABLE, CREATE PROCEDURE,DBA, PDB_DBA TO pdbadmin;` `@sqldevelopweb.sql`"
     }
