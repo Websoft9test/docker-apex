@@ -66,10 +66,6 @@ We assume that you are already familiar with Docker, and you can modify [docker-
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-apex
 cd docker-apex
-echo aaa  
-echo bbb  
-# .env file's [SITE_NAME] should  be changed to public IP or domain name to be accessed by Internet  
-# The default startup is erpnext12. If you want to run erpnext13, you only need to change ERPNEXT_VERSION/FRAPPE_VERSIO to V13  
 docker-compose  up -d
 ```
 
@@ -83,8 +79,6 @@ You should modify ports at [docker-compose file](docker-compose-production.yml) 
 
 #### question1  
 answer1  
-#### question2  
-answer2  
 ### Usage instructions
 
 You can point your browser to: *`http://Instance's Internet IP:port`*  
@@ -103,7 +97,8 @@ By default, the available users are:
 
 | Service | Port | Use |  Necessity |
 | --- | --- | --- | --- |
-| APEX | 9001 | Web-GUI database management tool | Y |
+| APEX | 9001 | Web-GUI Access Apex | Y |
+| SQL Develop Web | 9001 | Web-GUI Accesss SQL Develop Web | Y |
 | phpmyadmin | 5500 | Web-GUI database management tool | Y |
 ## Documentation
 

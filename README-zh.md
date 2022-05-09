@@ -70,10 +70,6 @@ sudo systemctl start docker
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-apex
 cd docker-apex
-echo aaa  
-echo bbb  
-# .env文件的SITE_NAME需要修改成公网IP或者域名才能被外网访问  
-# 默认启动的是ERPNext12，如果您想运行ERPNext13,只需将ERPNEXT_VERSION、FRAPPE_VERSION修改成v13  
 sudo docker-compose up -d
 ```
 
@@ -87,10 +83,8 @@ sudo docker-compose up -d
 
 修改 [docker-compose](docker-compose.yml) 文件中冲突的端口，然后再启动容器
 
-#### 问题1  
-答案1  
-#### 问题2  
-答案2  
+#### 如何才能访问SQL Develop Web  
+容器正常启动后，通过`http://ip:port/ords/sql-developer`可以进入SQL Develop Web，为了正常运行，需要运行如下脚本：`docker cp src/docker exec -it apex-oracledb sqlplus sys/123456@xepdb1 as sysdba; GRANT CREATE SESSION, CREATE TABLE, CREATE PROCEDURE,DBA, PDB_DBA TO pdbadmin;`  
 ### 使用说明
 
 启动应用后，本地浏览器访问 URL: *`http://服务器公网IP:端口`* 进入应用。  
@@ -109,7 +103,8 @@ sudo docker-compose up -d
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| APEX | 9001 | 浏览器访问 Apex | Y |
+| APEX | 9001 | 浏览器访问 Apex(ip:port/ords) | Y |
+| SQL Develop Web | 9001 | 浏览器访问 SQL Develop Web(ip:port/ords/sql-developer) | Y |
 | phpmyadmin | 5500 | 数据库可视化管理工具 | Y |
 ## 文档
 
