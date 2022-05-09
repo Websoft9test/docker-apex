@@ -70,6 +70,8 @@ sudo systemctl start docker
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-apex
 cd docker-apex
+# if your run Oracle Enterprise, you shoule login by your Oracle Account and password  
+docker login container-registry.oracle.com  
 sudo docker-compose up -d
 ```
 

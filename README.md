@@ -66,6 +66,8 @@ We assume that you are already familiar with Docker, and you can modify [docker-
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-apex
 cd docker-apex
+# if your run Oracle Enterprise, you shoule login by your Oracle Account and password  
+docker login container-registry.oracle.com  
 docker-compose  up -d
 ```
 
