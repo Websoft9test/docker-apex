@@ -1,3 +1,5 @@
+# iamge: https://container-registry.oracle.com/
+
 version: '3.8'
 
 services:
