@@ -36,7 +36,7 @@
       "required": "Y"
     },
     {
-      "name": "phpmyadmin",
+      "name": "EM",
       "port": "5500",
       "description_cn": "数据库可视化管理工具(https://ip:5500/em)",
       "description_en": "Web-GUI database management tool",
