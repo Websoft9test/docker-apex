@@ -62,7 +62,6 @@ sudo systemctl start docker
 alias docker-compose='docker compose'
 echo "alias docker-compose='docker compose'" >> /etc/profile.d/docker-compose.sh
 source /etc/profile.d/docker-compose.sh
-docker network create websoft9
 ```
 
 #### 安装 Oracle APEX
@@ -110,7 +109,7 @@ sudo docker compose up -d
 | --- | --- | --- | --- |
 | APEX | 9001 | 浏览器访问 Apex(http://ip:9001/ords) | Y |
 | SQL Develop Web | 9001 | 浏览器访问 SQL Develop Web(http://ip:9001/ords/sql-developer) | Y |
-| phpmyadmin | 5500 | 数据库可视化管理工具(https://ip:5500/em) | Y |
+| EM | 5500 | 数据库可视化管理工具(https://ip:5500/em) | Y |
 ## 文档
 
 [Oracle APEX 管理员手册](https://support.websoft9.com/docs/apex)

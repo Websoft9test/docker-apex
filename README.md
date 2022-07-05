@@ -58,7 +58,6 @@ sudo systemctl start docker
 alias docker-compose='docker compose'
 echo "alias docker-compose='docker compose'" >> /etc/profile.d/docker-compose.sh
 source /etc/profile.d/docker-compose.sh
-docker network create websoft9
 ```
 
 #### Install Oracle APEX
@@ -104,7 +103,7 @@ By default, the available users are:
 | --- | --- | --- | --- |
 | APEX | 9001 | Web-GUI Access Apex | Y |
 | SQL Develop Web | 9001 | Web-GUI Accesss SQL Develop Web | Y |
-| phpmyadmin | 5500 | Web-GUI database management tool | Y |
+| EM | 5500 | Web-GUI database management tool | Y |
 ## Documentation
 
 [Oracle APEX Administrator Guide](https://support.websoft9.com/docs/apex)
