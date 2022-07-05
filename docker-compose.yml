@@ -5,7 +5,7 @@ version: '3.8'
 services:
   oracledb:
     image: container-registry.oracle.com/database/${DB_ORACLE_EDITION}:${DB_ORACLE_VERSION}
-    container_name: ${APP_NAME}-oracledb  
+    container_name: ${APP_NAME}-db  
     environment:
       ORACLE_CHARACTERSET: ${DB_CHARACTERSET}
       ORACLE_PWD: ${DB_ORACLE_PASSWORD}
