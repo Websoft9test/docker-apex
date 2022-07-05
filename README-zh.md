@@ -101,7 +101,7 @@ sudo docker compose up -d
 
 | 用户名    | 密码 |
 | ------- | -------- |
-|  admin | 123456  |
+|  admin | UGz0IARz117ssO%  |
 
 #### 服务和端口
 
