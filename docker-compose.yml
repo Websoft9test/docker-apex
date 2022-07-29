@@ -32,7 +32,7 @@ services:
       - |
         echo 'CONN_STRING=sys/$DB_ORACLE_PASSWORD@oracledb:$DB_ORACLE_PORT/${DB_ORACLE_PDB}' > /opt/oracle/variables/conn_string.txt
         sed -i 's/Welcome_1/${APP_PASSWORD}/g' /opt/oracle/apex/setapexadmin.sql
-        bash  /opt/oracle/ords/startService.sh
+        bash  /opt/oracle/ords/bin/ords
     ports:
       -  ${APP_PORT}:8181
     restart: always
