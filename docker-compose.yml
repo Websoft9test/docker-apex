@@ -26,7 +26,7 @@ services:
     container_name: ${APP_NAME} 
     depends_on:
       - oracledb
-    command:
+    entrypoint:
       - /bin/bash
       - -c
       - |
