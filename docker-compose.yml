@@ -34,7 +34,7 @@ services:
         sed -i 's/Welcome_1/${APP_PASSWORD}/g' /opt/oracle/apex/setapexadmin.sql
         bash /entrypoint.sh
     ports:
-      -  ${APP_PORT}:8181
+      -  ${APP_HTTP_PORT}:8181
     restart: always
     
 networks:
